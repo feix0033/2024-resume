@@ -1,0 +1,466 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty	
+%% NOTE: Everything between here and END_FILE can
+%% be relocated to "mteck.sty" and then included with:
+%\usepackage{mteck}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{indentfirst}
+\usepackage{makeidx}
+\usepackage{amsmath}
+
+% Sans-Serif
+%\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+%\usepackage[default]{sourcesanspro}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+% Use with \color{Name}
+% Can wrap entire heading with {\color{accent} [...] }
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{445b80}
+% \definecolor{accentTitle}{HTML}{2b3545}
+\definecolor{accentText}{HTML}{445b80}
+\definecolor{accentLine}{HTML}{445b80}
+\definecolor{accentSp}{HTML}{445b80}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+\newcommand{\myName}{Fei Gu}
+\newcommand{\myTitle}{Junior Software Developer}
+\newcommand{\targetCompanyName}{ Ephort } % 填写求职的公司名
+\newcommand{\expectingPosition}{ Full Stack Developer } % 填写期望的职位
+\newcommand{\email}{evensnachi1@gmail.com}
+\newcommand{\tel}{+45 52000668}
+\newcommand{\linkedin}{https://www.linkedin.com/in/fei-gu-cs}
+\newcommand{\github}{https://github.com/feix0033}
+\newcommand{\myPhoto}[2]{
+	\hspace{#1}
+	\begin{tikzpicture}
+		\clip circle[radius=1.5cm];
+		\node{\includegraphics[width=3cm]{#2}};
+	\end{tikzpicture}
+}
+\newcommand{\headTitle}[2]{
+	\makebox[\textwidth-3em][r]{\LARGE\color{accentTitle} #2} \\
+	\makebox[\textwidth-3em][r]{\LARGE\color{accentTitle}} \\ %% 这里是为了让标题和副标题之间有一定的间距, 用了一个空盒子
+	\makebox[\textwidth-3em][r]{\Huge\color{accentTitle} #1}
+}
+
+% Centered title along with subtitle between HR
+% Usage: \documentTitle{Name}{Details}
+\newcommand{\documentTitle}[2]{
+\begin{center}
+{\LARGE\color{accentSp} #1}
+% {\LARGE\color{accentSp} #1}
+\vspace{10pt}
+{\color{accentLine} \hrule}
+\vspace{2pt}
+%{\footnotesize\color{accentTitle} #2}
+\footnotesize{#2}
+\vspace{2pt}
+{\color{accentLine} \hrule}
+\end{center}
+}
+
+
+% Create a footer with correct padding
+% Usage: \documentFooter{\thepage of X}
+\newcommand{\documentFooter}[1]{
+\setlength{\footskip}{10.25pt}
+\fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+% Usage: \numberedPages
+% WARNING: Must run pdflatex twice!
+\newcommand{\numberedPages}{
+\documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+% Usage: \section{Title}
+\titleformat{\section}{
+\vspace{-5pt}
+\color{accentText}
+\raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+% Usage: \tinysection{Title}
+\newcommand{\tinysection}[1]{
+\phantomsection
+\addcontentsline{toc}{section}{#1}
+{\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+% Usage: \heading{Left}{Right}
+\newcommand{\heading}[2]{
+\hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+\heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+\heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+% Usage: \begin{resume_list} [items] \end{resume_list}
+\newenvironment{resume_list}{
+\vspace{-7pt}
+\begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+\end{itemize}
+%\vspace{-2pt}
+}
+
+% precess bar
+% \definecolor{color1}{hex}{#0d0f80}  % green //rgba(56,166,119,1)
+\definecolor{color2}{rgb}{0.45,0.45,0.45}  % dark grey
+
+\newcommand{\progressbar}[2][3cm]{%
+\textcolor{accentLine}{\rule{#1 * \real{#2} / 100}{1.5ex}}%
+\textcolor{accentLine!15}{\rule{#1 - #1 * \real{#2} / 100}{1.5ex}}}
+
+% Formats an item to use as an itemized title
+% Usage: \itemTitle{Title}
+\newcommand{\itemTitle}[1]{
+\item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+%===================%
+%     My Resume     %
+%===================%
+
+%\numberedPages % NOTE: the last page requires a second build
+% \documentFooter{\thepage \space of 3} % Does similar without using last page
+\begin{document}
+
+%---------%
+% Heading %
+%---------%
+
+\begin{minipage}[c][7em][s]{0.45\textwidth}  
+	\myPhoto{4em}{myPhoto.jpg}
+\end{minipage}
+\begin{minipage}[c][7em][c]{0.50\textwidth}
+	\headTitle{\myName}{\myTitle}
+\end{minipage}
+\documentTitle{}{
+% Web Version
+%\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
+%\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
+%%
+\href{tel: \tel}{
+\raisebox{-0.05\height} \faPhone\ \tel} ~ | ~
+\href{mailto:\email}{
+\raisebox{-0.15\height} \faEnvelope\ \email} ~ | ~
+\href{\linkedin}{
+\raisebox{-0.15\height} \faLinkedin\ \ \linkedin} ~ | ~
+\href{\github}{
+\raisebox{-0.15\height} \faGithub\ \github } 
+}
+						
+%---------%
+% Summary %
+%---------%
+
+\tinysection{About me}
+As an innovative and adaptable full-stack developer, I am passionate about exploring new technologies. I enjoy creating new functions and UI to offer the user a great experience. And involved in solving the problems. I have quickly mastered React and Go, improving myself from front-end to full-stack development. My diverse sales, marketing, and restaurant management background has equipped me with a unique blend of technical expertise and strong interpersonal skills. These experiences have fostered in me a results-oriented approach and a commitment to efficient execution. I'm passionate about software engineering principles and am actively developing my expertise in software architecture and DevOps practices to become a software architect.
+%--------%
+% Skills %
+%--------%
+\section{Skills}
+	\begin{minipage}[c][10em][s]{0.45\textwidth}    
+		\centering
+		\textbf{Front-end} \\
+		\setlength{\baselineskip}{6pt plus 1pt}
+		\begin{align*}
+			HTML/CSS &\hspace{1em}\progressbar{80} \\
+			JavaScript/TypeScript &\hspace{1em}\progressbar{70} \\
+			React/Redux/React Router &\hspace{1em}\progressbar{80} \\
+			Angular &\hspace{1em}\progressbar{60} \\
+			Jest/Testing library &\hspace{1em}\progressbar{70} \\
+			% Tailwindcss &\hspace{1em}\progressbar{70} \\
+			% Webpack &\hspace{1em}\progressbar{50} \\
+			% PHP &\hspace{1em}\progressbar{30} \\
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}[c][10em][s]{0.45\textwidth}  
+		\centering
+		\textbf{Back-end} \\
+		\setlength{\baselineskip}{6pt plus 1pt} 
+		\begin{align*}
+			Java &\hspace{1em}\progressbar{60} \\
+			C\#/dotNet &\hspace{1em}\progressbar{70} \\
+			Golang/Gin/GROM &\hspace{1em}\progressbar{60} \\
+			RESTful\,API &\hspace{1em}\progressbar{70} \\
+		\end{align*}
+	\end{minipage}
+
+	\vspace{0.5em} %% 这里用一个空行来分开两层技能栏, 再用 vspace 来调整间距
+	\begin{minipage}[c][10em][s]{0.45\textwidth}  
+		\centering
+		\textbf{Database} \\
+		\setlength{\baselineskip}{8pt plus 1pt} 
+		\begin{align*}
+			SQL/DDL/DML/DQL &\hspace{1em}\progressbar{80} \\
+			MySQL/Postgresql &\hspace{1em}\progressbar{60} \\
+			SQLite &\hspace{1em}\progressbar{80} \\
+			Firestore &\hspace{1em}\progressbar{60} \\
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}[c][10em][s]{0.45\textwidth}  
+		\centering
+		\textbf{DevOps} \\
+		\setlength{\baselineskip}{8pt plus 1pt}
+		\begin{align*}
+			Branch\,Stratagy &\hspace{1em}\progressbar{80} \\
+			{CI/CD\,pipeline} &\hspace{1em}\progressbar{80} \\
+			Jinkins &\hspace{1em}\progressbar{70} \\
+			Github\,Actions &\hspace{1em}\progressbar{50} \\
+			Docker &\hspace{1em}\progressbar{30} \\
+		\end{align*}
+	\end{minipage}
+%------------%
+% Experience %
+%------------%
+\section{Experiences}
+
+%% Bifrost Full-time
+\headingBf{BifrostConnect Aps.}{Aug 2023 -- persent}
+\headingIt{Junior Software Developer}{Københaven, Denmark}
+\begin{resume_list}
+\itemTitle{React project}
+\item Participate with the team to develop and implement the new features included the UI/UX improvement.
+\item Implement the ESLint/Prettier for the code style and auto-formatting.
+\item Implement the unit test framework such as Jest and prepare for the continuing test implementation.
+\item Spearhead the components encapsulation and refactoring .
+\vspace{3pt}
+\itemTitle{Vanila JS project}
+\item The multiple legacy issue analysis and the bug fix.
+\item Participate in the new feature's design and development.
+\item Participated in documenting the issues and the development log.
+\item Branch strategy design and release strategy design.
+\vspace{3pt}
+\itemTitle{Golang project}
+\item Web API design and the endpoint implementation using Gin framework.
+\item Database API design and implement the query to operate the Database using GROM. 
+\item Participated in the Go project OOP implementation and the software architecture.
+\end{resume_list}
+
+%% Bulefin manager
+\headingBf{Bluefin Copenhagen ApS / Bluefin Sushi ApS}{2018 -- 2022}
+\headingIt{Restaurant manager}{Odense, Denmark}
+\begin{resume_list}
+\item Daily Operation design and implementation, hygiene check, regularly working process improvement.
+\item Employee management such as designing working schedules and employee performance support.
+\item Calculating the storage, place an order for supply.
+\item Customer service, customer issues resolve.
+\end{resume_list}
+\headingIt{Sushi Chef}{Odense, Denmark}
+\begin{resume_list}
+\item Material preparation.
+\item Delivery the sushi product.
+\end{resume_list}
+
+%% 电话销售
+\headingBf{Bangson Global intellectual property Tianjin company}{Aug 2010 -- Aug 2011}
+\headingIt{Telephone sales and intellectual Property counselor}{Tianjin, China}
+\begin{resume_list}
+\item Cold call the potential customer to introduce the company's service.
+\item Offer the intellectual property service to the potential customer.
+\end{resume_list}
+
+%% 健康公司
+\headingBf{Tianjin Saiyuan Health company}{Aug 2009 -- Aug 2010}
+\headingIt{Market Regional Manager Assistant}{Tianjin, China}
+\begin{resume_list}
+\item Assistant the regional manager to design the market strategy.
+\item Contect the franchiser, offering the sales support and the product training.
+\item Coprate with franchiser to improve the sales performance.
+\end{resume_list}
+
+
+%-----------%
+% Education %
+%-----------%
+
+\vspace{2em}
+\section{Education}
+
+\headingBf{AP degree in Computer Science}{2020 - 2023}
+\headingIt{Erhvervsakademi Syd Vest (EASV)}{Esbjerg, Denmark} % Note: Adding year(s) exposes an implied age
+\begin{resume_list}
+\item A further training course for 2.5 years with five semesters. 
+\item Cultivate the ability to develop, update, and maintain software and IT systems and to work with general computer issues.
+\end{resume_list}
+
+\headingIt{Course}{}
+\begin{resume_list}
+	\item {\bf Software design} {\hfill Require analysis, Design process(Alige), Design Principles}
+	\item {\bf Software construction}  {\hfill Programming language, Verification, Unit testing, Integration testing.}
+	\item {\bf Database system} {\hfill Database principle, Database design(ERD), MySQL}
+	\item {\bf Full Stack development} {\hfill Distribution system, Cloud server, }
+	\item {\bf DevOps} {\hfill Branch strategies, Docker, Jenkins, Feature gate, CI/CD, Software Testing}
+	\item {\bf IOT} {\hfill Fundamentals of Electric Circuits, Embedded system programming, MQTT}
+	\item {\bf Network} {\hfill Network principles, Network setting up practise}.
+\end{resume_list}
+
+%----------%
+% Language %
+%----------%
+
+\vspace{2em}
+\section{Language}
+
+\begin{itemize}[itemsep=1px, parsep=1pt, leftmargin=2cm]
+\item[English] \progressbar{70} Fluency: I may not have that much of a big word set, but I keep reading and improving my expression.
+\item[Danish] \progressbar{40} On-going: Now I'm preparing for the FVU trin 2 exam by myself.
+\item[Chinese] \progressbar{100} Native
+\end{itemize}
+
+\vspace{2em}
+\section{Others}
+% 其它一些该写的东西... 
+
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Cover Letter      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            %
+% 根据需求 对这个部分 uncomment %
+%                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentTitle{\myName}{
+\href{tel: \tel}{
+	\raisebox{-0.05\height} \faPhone\ \tel} ~ | ~
+\href{mailto:\email}{
+	\raisebox{-0.15\height} \faEnvelope\ \email} ~ | ~
+\href{\linkedin}{
+	\raisebox{-0.15\height} \faLinkedin\ \linkedin} ~ | ~
+\href{\github}{
+	\raisebox{-0.15\height} \faGithub\ \github }
+}
+
+\subsubsection*{Dear Rune:}
+\paragraph{}
+I’m so excited to write this letter to you. Since I knew Ephort and got inspired by Ephort’s website. I want to apply for a position at Ephort to improve my career and knowledge. As I understand, Ephort’s culture and environment for the developer is excessively appealing.
+
+\vspace{0.5em}
+\hspace{1em}From the content on Ephort’s homepage, I can perceive that Ephort has a friendly and enjoyable company culture between the lines. And the passion for creating great products for customers. The name Kristian, who is the senior developer, is mentioned in a lot of customer quotes. Which is very impressive to me. I wish I could be part of the process and offer my dedication to reach the purpose (At least I can help with some Chinese customers since the Chinese are my mother tongue. :D And improve my Danish, of course. :D ).
+
+\vspace{0.5em}
+\hspace{1em}I can see that Ephort always embraces new technology and devotes itself to improving and implementing the new tech with innovation. As presenters, organizers, and participants engage in tech meetups (Laravel EU) and hold development days(hackathons), all those events are interesting to me. I’m especially interested in back-end development, same as Ephort’s mentioned, even though my main working experience was in Front-end development.
+
+\vspace{0.5em}
+\hspace{1em}In fact, I have both front-end and back-end development education and some development experience.
+
+\vspace{0.5em}
+\hspace{1em}My educational background at Business Academy Southwest provided me with a comprehensive understanding of software development principles, including web development, software design, engineering, and DevOps. I am a strong advocate for TDD and CI/CD, having implemented these practices extensively throughout my academic projects, utilizing tools like Jenkins and Docker. I am also passionate about modular design principles and clean code(especially the onion architecture and dependency injection), ensuring code is readable, reusable, and adaptable. I was trained to use Angular as the front-end firmware, and Java/C\# as the back-end development language, the dotNet firmware and Entity Firmware were the back-end firmware to be used during my entire education process.
+
+\vspace{0.5em}
+\hspace{1em}My time at Bifrostconnect provided hands-on experience, allowing me to work extensively with JavaScript, React, Golang, Gin, GORM, and PostgreSQL. My responsibilities bridged both front-end and back-end development, which fostered a well-rounded skill set. For instance, I was instrumental in developing and refining core features, actively contributing ideas and solutions alongside my team. I spearheaded the implementation of a comprehensive code style guide and established a robust unit testing environment for front-end development, significantly bolstering the codebase’s quality and maintainability.
+
+\vspace{0.5em}
+\hspace{1em}Additionally, I participated in the release process, drafting release strategies based on our branching strategy and the production/test environment setup. This experience solidified my understanding of the entire software development lifecycle and honed my skills, especially in version control with Git and collaborative development using GitHub. Especially, I am bewildered by refactoring codes.
+
+\vspace{0.5em}
+\hspace{1em}Based on my educational background and on-field experience, I can handle full-stack development across the entire software development lifecycle. I have a big vision of the software construction to offer to Ephort’s application development project. Specifically, I can explore the software development project on React/Angular projects corresponding with the JAVA/C\#/Golang-based server and the most of Database design and implementation in specific usage, to offer a successful distribution system for customers' demand. I can also offer the branch strategy design and the CI/CD pipeline design to succeed in implementing the DevOps procedures.
+
+\vspace{0.5em}
+\hspace{1em}In my life, I believe that lift-circle learning and thinking is the way to keep a person vitality. And I do believe organizing, analyzing, optimizing are the ways to improve everything better. I’m looking at the technology out of my work scope in my free time, such as Vim, Vite, Latex, R, and so on. And I’m starting the Vue.js currently.
+
+\vspace{0.5em}
+\hspace{1em}I’m married and live in Odense SØ. We don’t have a child. But we have a cat. About the cat. (That is another lovely story. Hopefully, I got a chance to share it with you). I had more than 8 years of experience in kitchen furniture before I stepped on the developer’s ship. And I was a successful sushi chef. But I don’t like the kitchen work, obviously.
+
+\vspace{0.5em}
+\hspace{1em}I am also trying to learn how to play a skateboard (I wish that I had time to practice). Loved to play basketball even though I’m not a taller guy. I did 5 km in the DHL race once this year (a real marathon competition between companies in Københaven)(this one is on feet) and I got 5th in my company (I was only 10 minutes late but we only had 5 people in the competition). 
+
+\vspace{0.5em}
+\hspace{1em}Thank you for your time to read this letter. I hope we can have a face-to-face conversation if I get some attention from you. :D I’m expecting on $await fetch( myApply ).then( response => me )$. 
+
+\vspace{1em}
+
+{\hfill Sincerely,} \par
+{\hfill Fei Gu} \par
+{\hfill \today} \par
+
+
+\end{document}

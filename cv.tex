@@ -32,6 +32,7 @@
 \usepackage{indentfirst}
 \usepackage{makeidx}
 \usepackage{amsmath}
+\usepackage{xcolor}
 
 % Sans-Serif
 %\usepackage[sfdefault]{FiraSans}
@@ -47,8 +48,7 @@
 % Use with \color{Name}
 % Can wrap entire heading with {\color{accent} [...] }
 \usepackage{xcolor}
-\definecolor{accentTitle}{HTML}{445b80}
-% \definecolor{accentTitle}{HTML}{2b3545}
+\definecolor{accentTitle}{HTML}{ffffff}
 \definecolor{accentText}{HTML}{445b80}
 \definecolor{accentLine}{HTML}{445b80}
 \definecolor{accentSp}{HTML}{445b80}
@@ -182,8 +182,13 @@
 \definecolor{color2}{rgb}{0.45,0.45,0.45}  % dark grey
 
 \newcommand{\progressbar}[2][3cm]{%
-\textcolor{accentLine}{\rule{#1 * \real{#2} / 100}{1.5ex}}%
-\textcolor{accentLine!15}{\rule{#1 - #1 * \real{#2} / 100}{1.5ex}}}
+\textcolor{accentLine}{\rule{#1 * \real{#2} / 100}{0.8ex}}%
+\textcolor{accentLine!15}{\rule{#1 - #1 * \real{#2} / 100}{0.8ex}}}
+
+
+\newcommand{\smallProgressBar}[2][16em]{%
+\textcolor{accentLine}{\rule{#1 * \real{#2} / 100}{0.5ex}}%
+\textcolor{accentLine!15}{\rule{#1 - #1 * \real{#2} / 100}{0.5ex}}}
 
 % Formats an item to use as an itemized title
 % Usage: \itemTitle{Title}
@@ -209,191 +214,35 @@
 %---------%
 % Heading %
 %---------%
-
-\begin{minipage}[c][7em][s]{0.45\textwidth}  
-	\myPhoto{4em}{myPhoto.jpg}
+\begin{minipage}{\textwidth}
+	\colorbox{accentText}{
+		\input{photo.tex}
+		\input{title.tex}
+	}
 \end{minipage}
-\begin{minipage}[c][7em][c]{0.50\textwidth}
-	\headTitle{\myName}{\myTitle}
-\end{minipage}
-\documentTitle{}{
-% Web Version
-%\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
-%\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
-%%
-\href{tel: \tel}{
-\raisebox{-0.05\height} \faPhone\ \tel} ~ | ~
-\href{mailto:\email}{
-\raisebox{-0.15\height} \faEnvelope\ \email} ~ | ~
-\href{\linkedin}{
-\raisebox{-0.15\height} \faLinkedin\ \ \linkedin} ~ | ~
-\href{\github}{
-\raisebox{-0.15\height} \faGithub\ \github } 
-}
-						
-%---------%
-% Summary %
-%---------%
+\input{infoBar.tex}
 
-\tinysection{About me}
-As an innovative and adaptable full-stack developer, I am passionate about exploring new technologies. I enjoy creating new functions and UI to offer the user a great experience. And involved in solving the problems. I have quickly mastered React and Go, improving myself from front-end to full-stack development. My diverse sales, marketing, and restaurant management background has equipped me with a unique blend of technical expertise and strong interpersonal skills. These experiences have fostered in me a results-oriented approach and a commitment to efficient execution. I'm passionate about software engineering principles and am actively developing my expertise in software architecture and DevOps practices to become a software architect.
-%--------%
-% Skills %
-%--------%
-\section{Skills}
-	\begin{minipage}[c][10em][s]{0.45\textwidth}    
-		\centering
-		\textbf{Front-end} \\
-		\setlength{\baselineskip}{6pt plus 1pt}
-		\begin{align*}
-			HTML/CSS &\hspace{1em}\progressbar{80} \\
-			JavaScript/TypeScript &\hspace{1em}\progressbar{70} \\
-			React/Redux/React Router &\hspace{1em}\progressbar{80} \\
-			Angular &\hspace{1em}\progressbar{60} \\
-			Jest/Testing library &\hspace{1em}\progressbar{70} \\
-			% Tailwindcss &\hspace{1em}\progressbar{70} \\
-			% Webpack &\hspace{1em}\progressbar{50} \\
-			% PHP &\hspace{1em}\progressbar{30} \\
-		\end{align*}
-	\end{minipage}
-	\begin{minipage}[c][10em][s]{0.45\textwidth}  
-		\centering
-		\textbf{Back-end} \\
-		\setlength{\baselineskip}{6pt plus 1pt} 
-		\begin{align*}
-			Java &\hspace{1em}\progressbar{60} \\
-			C\#/dotNet &\hspace{1em}\progressbar{70} \\
-			Golang/Gin/GROM &\hspace{1em}\progressbar{60} \\
-			RESTful\,API &\hspace{1em}\progressbar{70} \\
-		\end{align*}
-	\end{minipage}
+\vspace{1.5em}
+\input{aboutme3.tex}
+% \input{aboutme.tex}
 
-	\vspace{0.5em} %% 这里用一个空行来分开两层技能栏, 再用 vspace 来调整间距
-	\begin{minipage}[c][10em][s]{0.45\textwidth}  
-		\centering
-		\textbf{Database} \\
-		\setlength{\baselineskip}{8pt plus 1pt} 
-		\begin{align*}
-			SQL/DDL/DML/DQL &\hspace{1em}\progressbar{80} \\
-			MySQL/Postgresql &\hspace{1em}\progressbar{60} \\
-			SQLite &\hspace{1em}\progressbar{80} \\
-			Firestore &\hspace{1em}\progressbar{60} \\
-		\end{align*}
-	\end{minipage}
-	\begin{minipage}[c][10em][s]{0.45\textwidth}  
-		\centering
-		\textbf{DevOps} \\
-		\setlength{\baselineskip}{8pt plus 1pt}
-		\begin{align*}
-			Branch\,Stratagy &\hspace{1em}\progressbar{80} \\
-			{CI/CD\,pipeline} &\hspace{1em}\progressbar{80} \\
-			Jinkins &\hspace{1em}\progressbar{70} \\
-			Github\,Actions &\hspace{1em}\progressbar{50} \\
-			Docker &\hspace{1em}\progressbar{30} \\
-		\end{align*}
-	\end{minipage}
-%------------%
-% Experience %
-%------------%
-\section{Experiences}
+\vspace{1.5em}
+\input{skills.tex}
 
-%% Bifrost Full-time
-\headingBf{BifrostConnect Aps.}{Aug 2023 -- persent}
-\headingIt{Junior Software Developer}{Københaven, Denmark}
-\begin{resume_list}
-\itemTitle{React project}
-\item Participate with the team to develop and implement the new features included the UI/UX improvement.
-\item Implement the ESLint/Prettier for the code style and auto-formatting.
-\item Implement the unit test framework such as Jest and prepare for the continuing test implementation.
-\item Spearhead the components encapsulation and refactoring .
-\vspace{3pt}
-\itemTitle{Vanila JS project}
-\item The multiple legacy issue analysis and the bug fix.
-\item Participate in the new feature's design and development.
-\item Participated in documenting the issues and the development log.
-\item Branch strategy design and release strategy design.
-\vspace{3pt}
-\itemTitle{Golang project}
-\item Web API design and the endpoint implementation using Gin framework.
-\item Database API design and implement the query to operate the Database using GROM. 
-\item Participated in the Go project OOP implementation and the software architecture.
-\end{resume_list}
+\vspace{1.5em}
+\input{experiences.tex}
+\pagebreak
 
-%% Bulefin manager
-\headingBf{Bluefin Copenhagen ApS / Bluefin Sushi ApS}{2018 -- 2022}
-\headingIt{Restaurant manager}{Odense, Denmark}
-\begin{resume_list}
-\item Daily Operation design and implementation, hygiene check, regularly working process improvement.
-\item Employee management such as designing working schedules and employee performance support.
-\item Calculating the storage, place an order for supply.
-\item Customer service, customer issues resolve.
-\end{resume_list}
-\headingIt{Sushi Chef}{Odense, Denmark}
-\begin{resume_list}
-\item Material preparation.
-\item Delivery the sushi product.
-\end{resume_list}
+\input{education.tex}
 
-%% 电话销售
-\headingBf{Bangson Global intellectual property Tianjin company}{Aug 2010 -- Aug 2011}
-\headingIt{Telephone sales and intellectual Property counselor}{Tianjin, China}
-\begin{resume_list}
-\item Cold call the potential customer to introduce the company's service.
-\item Offer the intellectual property service to the potential customer.
-\end{resume_list}
+\vspace{1.5em}
+\input{language.tex}
 
-%% 健康公司
-\headingBf{Tianjin Saiyuan Health company}{Aug 2009 -- Aug 2010}
-\headingIt{Market Regional Manager Assistant}{Tianjin, China}
-\begin{resume_list}
-\item Assistant the regional manager to design the market strategy.
-\item Contect the franchiser, offering the sales support and the product training.
-\item Coprate with franchiser to improve the sales performance.
-\end{resume_list}
+\vspace{1.5em}
+\input{passions.tex}
 
-
-%-----------%
-% Education %
-%-----------%
-
-\vspace{2em}
-\section{Education}
-
-\headingBf{AP degree in Computer Science}{2020 - 2023}
-\headingIt{Erhvervsakademi Syd Vest (EASV)}{Esbjerg, Denmark} % Note: Adding year(s) exposes an implied age
-\begin{resume_list}
-\item A further training course for 2.5 years with five semesters. 
-\item Cultivate the ability to develop, update, and maintain software and IT systems and to work with general computer issues.
-\end{resume_list}
-
-\headingIt{Course}{}
-\begin{resume_list}
-	\item {\bf Software design} {\hfill Require analysis, Design process(Alige), Design Principles}
-	\item {\bf Software construction}  {\hfill Programming language, Verification, Unit testing, Integration testing.}
-	\item {\bf Database system} {\hfill Database principle, Database design(ERD), MySQL}
-	\item {\bf Full Stack development} {\hfill Distribution system, Cloud server, }
-	\item {\bf DevOps} {\hfill Branch strategies, Docker, Jenkins, Feature gate, CI/CD, Software Testing}
-	\item {\bf IOT} {\hfill Fundamentals of Electric Circuits, Embedded system programming, MQTT}
-	\item {\bf Network} {\hfill Network principles, Network setting up practise}.
-\end{resume_list}
-
-%----------%
-% Language %
-%----------%
-
-\vspace{2em}
-\section{Language}
-
-\begin{itemize}[itemsep=1px, parsep=1pt, leftmargin=2cm]
-\item[English] \progressbar{70} Fluency: I may not have that much of a big word set, but I keep reading and improving my expression.
-\item[Danish] \progressbar{40} On-going: Now I'm preparing for the FVU trin 2 exam by myself.
-\item[Chinese] \progressbar{100} Native
-\end{itemize}
-
-\vspace{2em}
-\section{Others}
-% 其它一些该写的东西... 
-
+\vspace{1.5em}
+\input{spareTime.tex}
 
 \pagebreak
 

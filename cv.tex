@@ -32,7 +32,6 @@
 \usepackage{indentfirst}
 \usepackage{makeidx}
 \usepackage{amsmath}
-\usepackage{xcolor}
 
 % Sans-Serif
 %\usepackage[sfdefault]{FiraSans}
@@ -47,7 +46,6 @@
 % Colors
 % Use with \color{Name}
 % Can wrap entire heading with {\color{accent} [...] }
-\usepackage{xcolor}
 \definecolor{accentTitle}{HTML}{ffffff}
 \definecolor{accentText}{HTML}{445b80}
 \definecolor{accentLine}{HTML}{445b80}
@@ -223,7 +221,7 @@
 \input{infoBar.tex}
 
 \vspace{1.5em}
-\input{aboutme3.tex}
+\input{aboutme.tex}
 % \input{aboutme.tex}
 
 \vspace{1.5em}
@@ -246,70 +244,8 @@
 
 \pagebreak
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Cover Letter      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                            %
-% 根据需求 对这个部分 uncomment %
-%                            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\documentTitle{\myName}{
-\href{tel: \tel}{
-	\raisebox{-0.05\height} \faPhone\ \tel} ~ | ~
-\href{mailto:\email}{
-	\raisebox{-0.15\height} \faEnvelope\ \email} ~ | ~
-\href{\linkedin}{
-	\raisebox{-0.15\height} \faLinkedin\ \linkedin} ~ | ~
-\href{\github}{
-	\raisebox{-0.15\height} \faGithub\ \github }
-}
-
-\subsubsection*{Dear Rune:}
-\paragraph{}
-I’m so excited to write this letter to you. Since I knew Ephort and got inspired by Ephort’s website. I want to apply for a position at Ephort to improve my career and knowledge. As I understand, Ephort’s culture and environment for the developer is excessively appealing.
-
-\vspace{0.5em}
-\hspace{1em}From the content on Ephort’s homepage, I can perceive that Ephort has a friendly and enjoyable company culture between the lines. And the passion for creating great products for customers. The name Kristian, who is the senior developer, is mentioned in a lot of customer quotes. Which is very impressive to me. I wish I could be part of the process and offer my dedication to reach the purpose (At least I can help with some Chinese customers since the Chinese are my mother tongue. :D And improve my Danish, of course. :D ).
-
-\vspace{0.5em}
-\hspace{1em}I can see that Ephort always embraces new technology and devotes itself to improving and implementing the new tech with innovation. As presenters, organizers, and participants engage in tech meetups (Laravel EU) and hold development days(hackathons), all those events are interesting to me. I’m especially interested in back-end development, same as Ephort’s mentioned, even though my main working experience was in Front-end development.
-
-\vspace{0.5em}
-\hspace{1em}In fact, I have both front-end and back-end development education and some development experience.
-
-\vspace{0.5em}
-\hspace{1em}My educational background at Business Academy Southwest provided me with a comprehensive understanding of software development principles, including web development, software design, engineering, and DevOps. I am a strong advocate for TDD and CI/CD, having implemented these practices extensively throughout my academic projects, utilizing tools like Jenkins and Docker. I am also passionate about modular design principles and clean code(especially the onion architecture and dependency injection), ensuring code is readable, reusable, and adaptable. I was trained to use Angular as the front-end firmware, and Java/C\# as the back-end development language, the dotNet firmware and Entity Firmware were the back-end firmware to be used during my entire education process.
-
-\vspace{0.5em}
-\hspace{1em}My time at Bifrostconnect provided hands-on experience, allowing me to work extensively with JavaScript, React, Golang, Gin, GORM, and PostgreSQL. My responsibilities bridged both front-end and back-end development, which fostered a well-rounded skill set. For instance, I was instrumental in developing and refining core features, actively contributing ideas and solutions alongside my team. I spearheaded the implementation of a comprehensive code style guide and established a robust unit testing environment for front-end development, significantly bolstering the codebase’s quality and maintainability.
-
-\vspace{0.5em}
-\hspace{1em}Additionally, I participated in the release process, drafting release strategies based on our branching strategy and the production/test environment setup. This experience solidified my understanding of the entire software development lifecycle and honed my skills, especially in version control with Git and collaborative development using GitHub. Especially, I am bewildered by refactoring codes.
-
-\vspace{0.5em}
-\hspace{1em}Based on my educational background and on-field experience, I can handle full-stack development across the entire software development lifecycle. I have a big vision of the software construction to offer to Ephort’s application development project. Specifically, I can explore the software development project on React/Angular projects corresponding with the JAVA/C\#/Golang-based server and the most of Database design and implementation in specific usage, to offer a successful distribution system for customers' demand. I can also offer the branch strategy design and the CI/CD pipeline design to succeed in implementing the DevOps procedures.
-
-\vspace{0.5em}
-\hspace{1em}In my life, I believe that lift-circle learning and thinking is the way to keep a person vitality. And I do believe organizing, analyzing, optimizing are the ways to improve everything better. I’m looking at the technology out of my work scope in my free time, such as Vim, Vite, Latex, R, and so on. And I’m starting the Vue.js currently.
-
-\vspace{0.5em}
-\hspace{1em}I’m married and live in Odense SØ. We don’t have a child. But we have a cat. About the cat. (That is another lovely story. Hopefully, I got a chance to share it with you). I had more than 8 years of experience in kitchen furniture before I stepped on the developer’s ship. And I was a successful sushi chef. But I don’t like the kitchen work, obviously.
-
-\vspace{0.5em}
-\hspace{1em}I am also trying to learn how to play a skateboard (I wish that I had time to practice). Loved to play basketball even though I’m not a taller guy. I did 5 km in the DHL race once this year (a real marathon competition between companies in Københaven)(this one is on feet) and I got 5th in my company (I was only 10 minutes late but we only had 5 people in the competition). 
-
-\vspace{0.5em}
-\hspace{1em}Thank you for your time to read this letter. I hope we can have a face-to-face conversation if I get some attention from you. :D I’m expecting on $await fetch( myApply ).then( response => me )$. 
-
-\vspace{1em}
-
-{\hfill Sincerely,} \par
-{\hfill Fei Gu} \par
-{\hfill \today} \par
-
+\input{coverLetter.tex}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  14 NOV 2024 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  15 NOV 2024 09:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -641,13 +641,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \c@mv@tabular=\count333
 \c@mv@boldtabular=\count334
  (./photo.tex
-<photoBlackWhite.jpg, id=7, 1408.26125pt x 1408.26125pt>
-File: photoBlackWhite.jpg Graphic file (type jpg)
-<use photoBlackWhite.jpg>
-Package pdftex.def Info: photoBlackWhite.jpg  used on input line 2.
-(pdftex.def)             Requested size: 85.35826pt x 85.35156pt.
+<321.jpg, id=7, 1430.34375pt x 1430.34375pt>
+File: 321.jpg Graphic file (type jpg)
+<use 321.jpg>
+Package pdftex.def Info: 321.jpg  used on input line 4.
+(pdftex.def)             Requested size: 85.35826pt x 85.33676pt.
 
-Overfull \vbox (15.35825pt too high) detected at line 4
+Overfull \vbox (15.35825pt too high) detected at line 6
  []
 
 ) (./title.tex)
@@ -664,37 +664,37 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on 
  (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 14.
-) (./aboutme.tex) (./skills.tex
-Overfull \vbox (12.89pt too high) detected at line 40
+) (./lasseVersion.tex
+./lasseVersion.tex:1: You can't use `macro parameter character #' in horizontal mode.
+l.1 ...ing my journey with React, Golang, Java, C#
+                                                  , and DevOps, I've kept gr...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+) (./skills.tex
+Overfull \vbox (12.89pt too high) detected at line 39
  []
 
 
-Overfull \vbox (13.43pt too high) detected at line 52
+Overfull \vbox (13.43pt too high) detected at line 51
  []
 
 
-Overfull \vbox (13.18pt too high) detected at line 60
+Overfull \vbox (13.18pt too high) detected at line 59
  []
 
 ) (./experiences.tex) [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./photoBlackWhite.jpg>] (./education.tex) (./language.tex) (./passions.tex
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 5.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
-
-Package fontawesome5 Warning: The requested icon book has been replaced by the
-(fontawesome5)                solid version
-
-
-Package fontawesome5 Warning: The requested icon laptop has been replaced by
-(fontawesome5)                the solid version
-
-
-Underfull \hbox (badness 10000) detected at line 5
- \U/fontawesomefree0/solid/n/10 [ \OT1/bch/m/n/10 Reading \U/fontawesomefree2/solid/n/10 ^^A \OT1/bch/m/n/10 Learning 
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./321.jpg>] (./education.tex) (./language.tex) (./passions.tex
+Underfull \hbox (badness 10000) detected at line 16
+ \OT1/bch/m/sc/10 Vim   \OT1/bch/m/n/10 L[]T[]X  \OT1/bch/m/sc/10 Linux   TDD   puzzles   mathmatic   Suduku 
  []
 
 ) (./spareTime.tex
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 9.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
 
 Package fontawesome5 Warning: The requested icon basketball-ball has been
 (fontawesome5)                replaced by the solid version
@@ -733,20 +733,27 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 252.
+
  ) 
 Here is how much of TeX's memory you used:
- 25123 strings out of 474116
- 479187 string characters out of 5743681
+ 25124 strings out of 474116
+ 479139 string characters out of 5743681
  1962187 words of memory out of 5000000
- 47000 multiletter control sequences out of 15000+600000
- 579521 words of font info for 69 fonts, out of 8000000 for 9000
+ 47002 multiletter control sequences out of 15000+600000
+ 580366 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,87p,925b,770s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on cv.pdf (3 pages, 1635695 bytes).
+Output written on cv.pdf (3 pages, 1449234 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

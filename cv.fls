@@ -1,8 +1,8 @@
-PWD /Users/fgu/code/2024-resume
+PWD /Users/fei/code/CV-project/2024-resume
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/fgu/code/2024-resume/cv.tex
+INPUT /Users/fei/code/CV-project/2024-resume/cv.tex
 OUTPUT cv.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -266,9 +266,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1bch.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1bch.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/bitstrea/charter/bchr7t.tfm
-INPUT ./cv.aux
-INPUT ./cv.aux
-INPUT cv.aux
 OUTPUT cv.aux
 OUTPUT cv.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -310,9 +307,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomebran
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/fontawesome5/fa5brands0.tfm
-INPUT ./lasseVersion.tex
-INPUT ./lasseVersion.tex
-INPUT lasseVersion.tex
+INPUT ./aboutme.tex
+INPUT ./aboutme.tex
+INPUT aboutme.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/bitstrea/charter/bchr7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm
 INPUT ./skills.tex
@@ -380,9 +377,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/bitstrea/charter/bchr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/bitstrea/charter/bchrc7t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc
-INPUT ./coverLetter.tex
-INPUT ./coverLetter.tex
-INPUT coverLetter.tex
+INPUT ./coverLetter/Autorola.tex
+INPUT ./coverLetter/Autorola.tex
+INPUT coverLetter/Autorola.tex
 INPUT cv.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb

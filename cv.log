@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  15 NOV 2024 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.18)  18 NOV 2024 07:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/fgu/code/2024-resume/cv.tex
-(/Users/fgu/code/2024-resume/cv.tex
+**/Users/fei/code/CV-project/2024-resume/cv.tex
+(/Users/fei/code/CV-project/2024-resume/cv.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -594,32 +594,33 @@ LaTeX Info: Redefining \oldstylenums on input line 123.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/charter.sty
 Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
-LaTeX Font Info:    Trying to load font information for OT1+bch on input line 210.
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 211.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
-) (./cv.aux)
+)
+No file cv.aux.
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 210.
-LaTeX Font Info:    ... okay on input line 210.
-Package hyperref Info: Link coloring OFF on input line 210.
- (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+Package hyperref Info: Link coloring OFF on input line 211.
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count327
 \scratchdimen=\dimen281
@@ -651,7 +652,7 @@ Overfull \vbox (15.35825pt too high) detected at line 6
  []
 
 ) (./title.tex)
-Overfull \hbox (1.03409pt too wide) in paragraph at lines 219--220
+Overfull \hbox (1.03409pt too wide) in paragraph at lines 221--222
 [][][][][][][] 
  []
 
@@ -664,8 +665,8 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on 
  (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 14.
-) (./lasseVersion.tex
-./lasseVersion.tex:1: You can't use `macro parameter character #' in horizontal mode.
+) (./aboutme.tex
+./aboutme.tex:1: You can't use `macro parameter character #' in horizontal mode.
 l.1 ...ing my journey with React, Golang, Java, C#
                                                   , and DevOps, I've kept gr...
 Sorry, but I'm not programmed to handle this case;
@@ -726,7 +727,7 @@ Underfull \hbox (badness 10000) detected at line 9
  \U/fontawesomefree0/solid/n/10 @ \OT1/bch/m/n/10 Basketball \U/fontawesomefree0/solid/n/10 N \OT1/bch/m/n/10 Biking \U/fontawesomefree3/solid/n/10 » \OT1/bch/m/n/10 Cooking \U/fontawesomefree2/solid/n/10 Y \OT1/bch/m/n/10 Music \U/fontawesomefree1/solid/n/10 Y \OT1/bch/m/n/10 Movies \U/fontawesomefree0/solid/n/10 š \OT1/bch/m/n/10 Pets 
  []
 
-) [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}] (./coverLetter.tex) [3] 
+) [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}] (./coverLetter/Autorola.tex) [3] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./cv.aux)
  ***********
@@ -738,17 +739,17 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 252.
+Package lastpage Warning: Rerun to get the references right on input line 255.
 
  ) 
 Here is how much of TeX's memory you used:
- 25124 strings out of 474116
- 479139 string characters out of 5743681
+ 25122 strings out of 474116
+ 479163 string characters out of 5743681
  1962187 words of memory out of 5000000
- 47002 multiletter control sequences out of 15000+600000
+ 47001 multiletter control sequences out of 15000+600000
  580366 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,87p,925b,770s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,87p,945b,770s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 Output written on cv.pdf (3 pages, 1449234 bytes).
 PDF statistics:

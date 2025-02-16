@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738613524.92126 "/Users/fgu/code/2024-resume/cv.tex" "cv.pdf" "cv" 1738613525.74167 0
+["pdflatex"] 1739128953.95675 "/Users/fgu/code/2024-resume/cv.tex" "cv.pdf" "cv" 1739128954.79645 0
   "/Users/fgu/code/2024-resume/cv.tex" 1738566773.50886 6071 c74290cb5408b05eaac3e69ea8546142 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
@@ -19,8 +19,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb" 1136849748 33799 6c8c18c1e1a138641a52c29f0b878445 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb" 1136849748 34869 539b6fed90ef630e9049bc13079bc598 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb" 1136849748 35118 12369bddf1a14581d11fcdbf86619250 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb" 1651520503 204258 177851ae99767090543ae24e73c92f2f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb" 1651520503 295323 d099723373a00cc17d5ae0c9738bb5b3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/vf/bitstrea/charter/bchb7t.vf" 1136768653 1372 e6cfde23c168b1d1864ce6aa6dffa18b ""
@@ -177,15 +176,15 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730103455 8221439 e39d7ce70c9ee6ef279b2b83c092073d ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "321.jpg" 1731913256.00017 1318682 eb855e2e2c6c5e9b9a0a8b2e2d4f9457 ""
-  "aboutme.tex" 1738567025.33593 579 c5421038fe9d0534f63419f9b862acce ""
-  "cv.aux" 1738613525.66133 1603 840e2352015af0308aacab0f6ef6d8fc "pdflatex"
+  "aboutme.tex" 1739128953.7304 650 9b3340007b68b54fd69b8cab8e57e382 ""
+  "cv.aux" 1739128954.72011 1603 840e2352015af0308aacab0f6ef6d8fc "pdflatex"
   "cv.tex" 1738566773.50886 6071 c74290cb5408b05eaac3e69ea8546142 ""
   "education.tex" 1738566516.15559 2559 f5ceba61b8ed414e9ae8a34c9b1ea38c ""
   "experiences.tex" 1738564913.54354 2550 e5c86082f6677f936584f4f00dd745bd ""
   "infoBar.tex" 1731449506.10434 430 a69c6a37ef086731d10c7a74f102274f ""
   "language.tex" 1731515621.40326 665 30a083fb4f9360a3903135bc8709cfb2 ""
   "photo.tex" 1731913256.02283 185 3bf7ef0a2091fdc088c4c3267b825da0 ""
-  "skills.tex" 1738613524.57796 1852 1f6dd5157bc3ad21b5e15def2394c6f0 ""
+  "skills.tex" 1739128241.38985 2050 8ddabd946a3abdf31b32309a4cf19180 ""
   "title.tex" 1733137462.85585 90 29d7e6ee0313b17e1ea89e47f22be53d ""
   (generated)
   "cv.aux"
